@@ -1,3 +1,4 @@
+"use client"
 import { useState } from 'react';
 
 export default function MyApp() {
@@ -9,7 +10,7 @@ export default function MyApp() {
 
   return (
     <div>
-      <h1>Counters that update together</h1>
+      <h1>Button</h1>
       <MyButton count={count} onClick={handleClick} />
       <MyButton count={count} onClick={handleClick} />
     </div>
@@ -23,3 +24,4 @@ function MyButton({ count, onClick }) {
     </button>
   );
 }
+

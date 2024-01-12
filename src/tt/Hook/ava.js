@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 const user = {
    name: 'Hedy Lamarr',
    imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',

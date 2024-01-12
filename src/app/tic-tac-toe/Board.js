@@ -23,7 +23,7 @@ export default function Game() {
     if (move > 0) {
       description = 'Go to move #' + move;
     } else {
-      description = 'Go to game start';
+      description = 'GAME START';
     }
     return (
       <li key={move}>
@@ -33,11 +33,12 @@ export default function Game() {
   });
 
   return (
-    <div className="game">
-      <div className="game-board">
+    <div className="game gap-2">
+      <h1>TIC TAC TOE</h1>
+      <div className="game-board  fle">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
-      <div className="game-info">
+      <div className="game-info ">
         <ol>{moves}</ol>
       </div>
     </div>
@@ -70,12 +71,11 @@ function Square({ value, onSquareClick }) {
   if (winner) {
     status = 'Winner: ' + winner;
   } else {
-    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+    status = 'Player: ' + (xIsNext ? 'X' : 'O');
   }
 
   return (
-    <>
-      <div className="status">{status}</div>
+  <>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -91,7 +91,8 @@ function Square({ value, onSquareClick }) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+      <div className="status">{status}</div>
+      </>
   );
 }
 function calculateWinner(squares) {

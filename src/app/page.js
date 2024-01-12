@@ -1,23 +1,20 @@
-import Image from 'next/image'
-import MyApp from '@/tt/Button'
-import AboutPage from '@/tt/AboutPage'
-import Profile from '@/tt/ava'
-import ShoppingList from '@/tt/product'
-import Game from './tic-tac-toe/Board'
+import Game from "@/app/tic-tac-toe/Board"
+import MyApp from "@/tt/Hook/button"
+import AboutPage from "@/tt/Hook/aboutPage"
+import Profile from "@/tt/Hook/ava"
+import Product from "@/tt/Hook/product"
+import Button1 from "@/tt/Hook/button1"
 
 export default function Home() {
 
   return (
-
-     
-
       <div>
       <Game></Game>
-      <MyApp></MyApp> 
+      <MyApp></MyApp>
+      <Button1/>
       <AboutPage></AboutPage>
       <Profile></Profile>
-      <ShoppingList></ShoppingList>
+      <Product/>
       </div>
-      
   )
 }
